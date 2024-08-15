@@ -3,4 +3,7 @@ from django.shortcuts import render
 
 # Create your views here.
 def hello(request):
-    return HttpResponse("Hello world")
+    return HttpResponse("Hello worlhhhd")
+
+def about(request):
+    return HttpResponse("About")
