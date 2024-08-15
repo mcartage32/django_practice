@@ -16,7 +16,11 @@ def projects(request):
     })
 
 def task(request):
-    return render(request, 'tasks.html')
+    tasks = Task.objects.all()
+    return render(request, 'tasks.html', {
+        'tasks': tasks
+        
+    })
 
 def hello(request, username):
     return HttpResponse("Hello %s" % username)

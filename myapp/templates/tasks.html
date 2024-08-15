@@ -4,9 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Task</title>
-    <h1>Tasks</h1>
+    <h1>Tareas</h1>
 </head>
 <body>
-    
+    {%for task in tasks%}
+    <h2>{% if task.done == False %}🕑 {%else%} ✅ {%endif%}Titulo:</h2>
+    {{task.title}}
+    <h2>Descripción:</h2>
+    {{task.description}}
+    {%endfor%}
+
 </body>
 </html>
