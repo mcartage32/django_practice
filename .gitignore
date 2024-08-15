@@ -1,0 +1,46 @@
+# Entorno Virtual
+venv/
+
+# Python
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+
+# Django
+*.log
+*.pot
+*.pyc
+__pycache__/
+db.sqlite3
+media/
+staticfiles/
+
+# Configuración del Entorno
+.env
+
+# IDEs y editores
+.vscode/
+.idea/
+*.swp
+*.swo
+*.sublime-workspace
+*.sublime-project
+
+# Sistema operativo
+.DS_Store
+Thumbs.db
+
+# Otros archivos
+*.coverage
+*.tox
+*.nox
+*.coverage.*
+*.hypothesis/
+.pytest_cache/
+nosetests.xml
+coverage.xml
+*.cover
+*.py,cover
+*.log
+*.tmp
