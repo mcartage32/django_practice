@@ -1,5 +1,7 @@
 from django.http import HttpResponse, JsonResponse
 from django.shortcuts import render, get_object_or_404
+
+from myapp.forms import CreateNewProject
 from .models import Project, Task
 
 # Create your views here.
@@ -26,4 +28,6 @@ def hello(request, username):
     return HttpResponse("Hello %s" % username)
 
 def createProject(request):
-    return render(request,'create_project.html')
+    return render(request,'create_project.html',{
+        'form': CreateNewProject()
+    })
