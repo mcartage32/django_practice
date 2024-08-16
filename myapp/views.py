@@ -1,5 +1,5 @@
-from django.http import HttpResponse, JsonResponse
-from django.shortcuts import render, get_object_or_404
+from django.http import HttpResponse
+from django.shortcuts import render, redirect
 
 from myapp.forms import CreateNewProject
 from .models import Project, Task
@@ -28,6 +28,10 @@ def hello(request, username):
     return HttpResponse("Hello %s" % username)
 
 def createProject(request):
-    return render(request,'create_project.html',{
+    if request.method == 'GET':
+        return render(request,'create_project.html',{
         'form': CreateNewProject()
     })
+    else:
+        Project.objects.create(name = request.POST["name"])
+        return redirect('projects')

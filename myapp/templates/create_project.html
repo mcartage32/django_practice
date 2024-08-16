@@ -9,7 +9,11 @@
     <h1>Create Project</h1>
 </head>
 <body>
-    {{ form }}
+    <form method="post">
+        {% csrf_token %}
+        {{ form }}
+        <input type="submit" value="Save">
+    </form>
 </body>
 {% endblock %}
 </html>

@@ -1,0 +1,44 @@
+/* Estilos generales para la barra de navegación */
+nav {
+    background-color: #333;
+    padding: 10px;
+}
+
+nav ul {
+    list-style: none; /* Quita los puntos de la lista */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra los ítems en la barra */
+}
+
+nav ul li {
+    margin: 0 15px; /* Espacio entre los ítems */
+}
+
+nav ul li a {
+    color: #fff; /* Color del texto de los enlaces */
+    text-decoration: none; /* Quita el subrayado de los enlaces */
+    font-size: 16px; /* Tamaño del texto */
+    display: block;
+    padding: 10px 15px; /* Espaciado interno */
+    transition: background-color 0.3s, color 0.3s; /* Transición suave para el color de fondo y el texto */
+}
+
+nav ul li a:hover {
+    background-color: #555; /* Color de fondo al pasar el mouse */
+    color: #fff; /* Color del texto al pasar el mouse */
+    cursor: pointer; /* Cambia el cursor a puntero */
+}
+
+/* Estilo responsivo */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column; /* Cambia la dirección de los ítems a columna en pantallas pequeñas */
+        align-items: center; /* Centra los ítems en el contenedor */
+    }
+
+    nav ul li {
+        margin: 10px 0; /* Espacio vertical entre los ítems */
+    }
+}

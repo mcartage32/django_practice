@@ -1,21 +1,33 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{% static '/styles/main.css' %}"> 
+</head>
+<body>
 <nav>
     <ul>
         <li>
-            <a href="/">Home</a>
+            <a href="{% url 'index' %}">Home</a>
         </li>
         <li>
-            <a href="/about">About</a>
+            <a href="{% url 'about' %}">About</a>
         </li>
         <li>
-            <a href="/projects">Projects</a>
+            <a href="{% url 'projects' %}">Projects</a>
         </li>
         <li>
-            <a href="/tasks">Tasks</a>
+            <a href="{% url 'tasks' %}">Tasks</a>
         </li>
         <li>
-            <a href="/create-project">Create Project</a>
+            <a href="{% url 'create-project' %}">Create Project</a>
         </li>
     </ul>
 </nav>
 {% block content %}
 {% endblock %}
+</body>
+</html>
+
