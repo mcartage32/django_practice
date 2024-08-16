@@ -25,3 +25,5 @@ def task(request):
 def hello(request, username):
     return HttpResponse("Hello %s" % username)
 
+def createProject(request):
+    return render(request,'create_project.html')
